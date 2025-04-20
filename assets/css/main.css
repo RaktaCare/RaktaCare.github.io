@@ -54,25 +54,263 @@ Description: Niotech - App Landing HTML Template <
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 :root {
-  --body: #fff;
-  --black: #000;
-  --white: #fff;
-  --theme: #7444FD;
-  --theme2: #F9F3EF;
-  --theme3: #FAF8FF;
-  --title: #282C32;
-  --header: #282C32;
-  --orange: #e78c45;
-  --text: #858585;
-  --text2: #cbcbcb;
-  --border: #E6E6E6;
-  --border-2: #F1F1F1;
-  --border-3: #D8D8D8;
-  --border-4: #E0E0E0;
-  --border-5: #565656;
-  --bg-1: #161921;
-  --bg-2: #F6F7FF;
-  --box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
+  /* Modern color palette */
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --secondary: #a78bfa;
+  --secondary-dark: #7c3aed;
+  --accent: #14b8a6;
+  --success: #22c55e;
+  --warning: #f59e42;
+  --error: #ef4444;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --navbar-bg: #ffffff;
+  --navbar-text: #1e293b;
+  --navbar-border: #e5e7eb;
+  --card-bg: #ffffff;
+  --card-shadow: 0 2px 12px 0 rgba(16,30,54,0.08);
+  --button-bg: #2563eb;
+  --button-text: #ffffff;
+  --button-hover-bg: #14b8a6;
+  --button-hover-text: #ffffff;
+  --button-border-radius: 0.5rem;
+  --link: #2563eb;
+  --link-hover: #a78bfa;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --heading: #1e293b;
+  --border: #e5e7eb;
+  --input-bg: #f1f5f9;
+  --input-border: #e5e7eb;
+  --input-focus: #2563eb;
+  --focus-outline: 2px solid #2563eb;
+  --radius: 0.75rem;
+  --shadow: 0 2px 12px 0 rgba(16,30,54,0.08);
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  --font-heading: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--background);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--heading);
+  font-weight: 700;
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.navbar, .header-section-1, .header-1 {
+  background: var(--navbar-bg) !important;
+  color: var(--navbar-text) !important;
+  border-bottom: 1px solid var(--navbar-border);
+  padding: var(--spacing-xs) var(--spacing-md);
+}
+.navbar a, .header-section-1 a, .header-1 a {
+  color: var(--navbar-text) !important;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  transition: color 0.2s;
+}
+.navbar a:hover, .header-section-1 a:hover, .header-1 a:hover {
+  color: var(--link-hover) !important;
+}
+
+.hero-section {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+}
+.hero-section h1, .hero-section h2 {
+  color: #fff;
+  margin-bottom: var(--spacing-sm);
+}
+.hero-section .theme-btn {
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--button-border-radius);
+  font-size: 1.125rem;
+  padding: var(--spacing-xs) var(--spacing-lg);
+  box-shadow: var(--shadow);
+  transition: background 0.2s;
+}
+.hero-section .theme-btn:hover {
+  background: var(--primary-dark);
+}
+
+.card, .card-style, .feature-card, .pricing-card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  transition: box-shadow 0.2s;
+}
+.card:hover, .card-style:hover, .feature-card:hover, .pricing-card:hover {
+  box-shadow: 0 6px 24px 0 rgba(16,30,54,0.14);
+}
+
+.theme-btn, .btn, button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border-radius: var(--button-border-radius);
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: var(--spacing-xs) var(--spacing-md);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.theme-btn:hover, .btn:hover, button:hover,
+.theme-btn:focus, .btn:focus, button:focus {
+  background: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  outline: var(--focus-outline);
+}
+
+input, textarea, select {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--input-focus);
+  outline: var(--focus-outline);
+}
+
+label {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover, a:focus {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+section, .section {
+  padding: var(--spacing-lg) 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.75rem;
+}
+[class^="col-"], [class*=" col-"] {
+  padding: 0 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  .hero-section {
+    padding: var(--spacing-md) 0;
+  }
+  .card, .card-style, .feature-card, .pricing-card {
+    padding: var(--spacing-sm);
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .hero-section {
+    padding: var(--spacing-md) 0;
+  }
+  .navbar, .header-section-1, .header-1 {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    padding: 0 var(--spacing-xs);
+  }
+  .hero-section {
+    padding: var(--spacing-sm) 0;
+  }
+}
+
+/* Utility classes for spacing */
+.mt-1 { margin-top: var(--spacing-xs) !important; }
+.mt-2 { margin-top: var(--spacing-sm) !important; }
+.mt-3 { margin-top: var(--spacing-md) !important; }
+.mb-1 { margin-bottom: var(--spacing-xs) !important; }
+.mb-2 { margin-bottom: var(--spacing-sm) !important; }
+.mb-3 { margin-bottom: var(--spacing-md) !important; }
+.pt-1 { padding-top: var(--spacing-xs) !important; }
+.pt-2 { padding-top: var(--spacing-sm) !important; }
+.pt-3 { padding-top: var(--spacing-md) !important; }
+.pb-1 { padding-bottom: var(--spacing-xs) !important; }
+.pb-2 { padding-bottom: var(--spacing-sm) !important; }
+.pb-3 { padding-bottom: var(--spacing-md) !important; }
+
+/* Focus outlines for accessibility */
+:focus-visible {
+  outline: var(--focus-outline) !important;
+  outline-offset: 2px;
+}
+
+/* Muted text */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+
+
+/* Modern theme color variables added for easy reference */
+:root {
+  --navbar-bg: var(--primary);
+  --navbar-text: var(--white);
+  --button-bg: var(--primary);
+  --button-text: var(--white);
+  --button-hover-bg: var(--secondary);
+  --button-hover-text: var(--white);
+  --link: var(--primary);
+  --link-hover: var(--secondary);
+  --card-bg: var(--surface);
+  --card-shadow: var(--box-shadow);
+  --theme: var(--primary);
 }
 
 /* 03.Typography */
@@ -85,7 +323,7 @@ body {
   font-weight: normal;
   line-height: 28px;
   color: var(--text);
-  background-color: var(--white);
+  background-color: var(--body);
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -97,10 +335,22 @@ ul {
   list-style: none;
 }
 
-button {
+button, .theme-btn, .btn {
   border: none;
-  background-color: transparent;
-  padding: 0;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.75em 2em;
+  border-radius: 5px;
+  font-weight: 600;
+  box-shadow: var(--box-shadow);
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+button:hover, .theme-btn:hover, .btn:hover,
+button:focus, .theme-btn:focus, .btn:focus {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  box-shadow: 0px 6px 30px 0px rgba(230, 74, 89, 0.12);
 }
 
 input:focus {
@@ -180,11 +430,12 @@ a {
   text-decoration: none;
   outline: none !important;
   cursor: pointer;
-  color: var(--title);
+  color: var(--link);
   transition: all 0.4s ease-in-out;
 }
-a:hover {
-  color: var(--theme) !important;
+a:hover, a:focus {
+  color: var(--link-hover) !important;
+  text-decoration: underline;
 }
 
 p {
@@ -427,7 +678,64 @@ input[type=radio]:checked ~ label::before {
   color: var(--white);
 }
 
-/* 04.Buttons */
+/* ========== Button Styles ========== */
+
+.pre-register-btn {
+  display: inline-block;
+  padding: 0.85em 2.2em;
+  font-size: 1.15rem;
+  font-weight: 700;
+  background: #D32F2F;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 0 0 rgba(211,47,47,0.6), 0 2px 8px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: 
+    background 0.3s cubic-bezier(.4,0,.2,1),
+    transform 0.2s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+  outline: none;
+  position: relative;
+  z-index: 1;
+  margin-top: 16px;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  animation: pre-register-pulse 1.8s infinite cubic-bezier(.4,0,.2,1);
+}
+
+.pre-register-btn:focus {
+  box-shadow: 0 0 0 4px rgba(211,47,47,0.25), 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.pre-register-btn:hover, .pre-register-btn:active {
+  background: #b71c1c;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px 3px rgba(211,47,47,0.30), 0 4px 16px rgba(0,0,0,0.15);
+}
+
+@keyframes pre-register-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(211,47,47,0.6), 0 2px 8px rgba(0,0,0,0.10);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(211,47,47,0.12), 0 2px 8px rgba(0,0,0,0.10);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(211,47,47,0.6), 0 2px 8px rgba(0,0,0,0.10);
+  }
+}
+
+@media (max-width: 600px) {
+  .pre-register-btn {
+    font-size: 1rem;
+    padding: 0.75em 1.5em;
+    margin-top: 12px;
+  }
+}
+
 /*----------------------------------------------
     # Buttons style here
 ----------------------------------------------*/
@@ -782,6 +1090,149 @@ input[type=radio]:checked ~ label::before {
     max-width: 1440px;
   }
 }
+/* Responsive Enhancements */
+
+/* Ensure all images are fluid */
+img, .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive text scaling */
+h1, .intro-title, .section-title .title {
+  font-size: 2.5rem;
+}
+@media (max-width: 1199px) {
+  h1, .intro-title, .section-title .title {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 991px) {
+  h1, .intro-title, .section-title .title {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  h1, .intro-title, .section-title .title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 575px) {
+  h1, .intro-title, .section-title .title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Section padding for mobile */
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 991px) {
+  .section-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .section-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* Bootstrap grid override for custom gx-60, gy-5, etc. */
+.gx-60 {
+  --bs-gutter-x: 3.75rem;
+}
+@media (max-width: 991px) {
+  .gx-60 {
+    --bs-gutter-x: 1.5rem;
+  }
+}
+.gy-5 {
+  --bs-gutter-y: 3rem;
+}
+@media (max-width: 991px) {
+  .gy-5 {
+    --bs-gutter-y: 1.5rem;
+  }
+}
+
+/* Navigation responsiveness */
+.header-section-1 .main-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+@media (max-width: 991px) {
+  .header-section-1 .main-menu ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .header-section-1 .main-menu ul li {
+    width: 100%;
+  }
+  .header-section-1 .main-menu ul li .submenu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+  }
+}
+
+/* Hamburger menu always visible on mobile */
+@media (max-width: 991px) {
+  .header__hamburger {
+    display: block !important;
+  }
+}
+
+/* Button and input scaling */
+.theme-btn, input, textarea {
+  font-size: 1rem;
+}
+@media (max-width: 575px) {
+  .theme-btn, input, textarea {
+    font-size: 0.95rem;
+  }
+}
+
+/* Ensure columns stack vertically on mobile */
+@media (max-width: 991px) {
+  .col-xl-6, .col-xl-4, .col-xl-5, .col-xl-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Utility for hiding/showing elements on mobile/desktop */
+@media (max-width: 991px) {
+  .d-xl-block { display: none !important; }
+  .d-block { display: block !important; }
+}
+@media (min-width: 992px) {
+  .d-xl-block { display: block !important; }
+  .d-block { display: none !important; }
+}
+
+/* Prevent overflow for text and images */
+.intro-desc, .section-desc, p {
+  word-break: break-word;
+}
+
+/* Fine-tune padding/margins for small screens */
+@media (max-width: 575px) {
+  .btn-wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .about-content, .intro-content {
+    padding: 0 10px;
+  }
+}
+
 /* 07.Animation */
 /*----------------------------------------------
     # All Animation style here
