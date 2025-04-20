@@ -1,9 +1,9 @@
 /*-----------------------------------------------------------------
-Theme Name: Niotech
+Theme Name: RaktaCare
 Author: Gramentheme
 Author URI: https://themeforest.net/user/gramentheme
 Version: 1.0.0 
-Description: Niotech - App Landing HTML Template <
+Description: RaktaCare - App Landing HTML Template <
 
 -------------------------------------------------------------------
 JS TABLE OF CONTENTS
