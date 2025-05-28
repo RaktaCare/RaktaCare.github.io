@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.innoveloper.raktacare",
+      "sha256_cert_fingerprints": [
+        "CF:FA:42:C6:6C:1D:18:47:90:EF:5D:94:30:35:67:B8:03:C5:4F:E2:A2:47:AB:36:43:16:2C:A0:28:6E:77:26"
+      ]
+    }
+  }
+]
