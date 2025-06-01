@@ -1,9 +1,9 @@
 /*-----------------------------------------------------------------
-Theme Name: Niotech
-Author: Gramentheme
-Author URI: https://themeforest.net/user/gramentheme
+Theme Name: Innoveloper
+Author: Innoveloper
+Author URI: https://themeforest.net/user/Innoveloper
 Version: 1.0.0 
-Description: Niotech - App Landing HTML Template <
+Description: RaktaCare <
 
 -------------------------------------------------------------------
 JS TABLE OF CONTENTS
