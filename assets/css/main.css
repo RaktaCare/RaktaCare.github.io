@@ -4143,7 +4143,7 @@ input.main-search-input::placeholder {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 60px 0;
 }
 
 @media (max-width: 1199px) {
@@ -6689,7 +6689,7 @@ input.main-search-input::placeholder {
 
 .intro-wrapper.style1 .intro-content {
   position: relative;
-  padding: 215px 0 100px;
+  padding: 215px 0 0;
   z-index: 5;
   max-width: 720px;
 }
@@ -9200,11 +9200,11 @@ input.main-search-input::placeholder {
 }
 
 .blog-card.style1 {
-  padding: 24px;
-  border-radius: 15px;
+  padding: 12px;
+  border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--white);
-  min-height: 445px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -9249,8 +9249,8 @@ input.main-search-input::placeholder {
 
 .blog-card.style1 .body h3 {
   margin-top: 30px;
-  padding-bottom: 24px;
-  margin-bottom: 24px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
   border-bottom: 1px solid var(--border);
 }
 
